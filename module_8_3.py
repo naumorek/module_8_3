@@ -99,7 +99,7 @@ class Car:
         else:
             raise IncorrectCarNumbers(message='Некорректный тип данных для номеров')
         if len(numbers)!=6:
-            raise IncorrectVinNumber(message='Неверная длина номера')
+            raise IncorrectCarNumbers(message='Неверная длина номера')
 
         return True
 
@@ -133,7 +133,7 @@ else:
   print(f'{second.model} успешно создан')
 
 try:
-  third = Car('Model3', 2020202, 'нет номера')
+  third = Car('Model3', 2020202, 'нету номера')
 except IncorrectVinNumber as exc:
   print(exc.message)
 except IncorrectCarNumbers as exc:
